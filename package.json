@@ -1,9 +1,11 @@
 {
-  "name": "mynta-se",
+  "name": "whisperlight-portholm-com",
   "version": "0.0.1",
   "description": "A basic site made with HTML5 Boilerplate.",
   "keywords": [
-    "mynta",
+    "whisperlight",
+    "rpg",
+    "system shutdown",
     "html5-boilerplate"
   ],
   "license": "MIT",

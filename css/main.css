@@ -264,10 +264,28 @@ textarea {
 /* ==========================================================================
    Customizations
    ========================================================================== */
+@font-face {
+  font-family: "anuratiregular";
+  src: url(../fonts/anurati-regular-webfont.woff2) format("woff2"),
+    url(../fonts/anurati-regular-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   background: url(../img/bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+h1 {
+  color: #dfeff9;
+  font-family: "anuratiregular", "Franklin Gothic Medium", "Arial Narrow", Arial,
+    sans-serif;
+  text-transform: uppercase;
+  margin: 2rem auto;
+  text-align: center;
+  font-size: 5rem;
 }
