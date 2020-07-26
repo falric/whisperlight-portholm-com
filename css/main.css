@@ -329,6 +329,19 @@ footer {
   flex-grow: 0;
 }
 
+.toggle-terminal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.toggle-terminal:focus {
+  outline: none;
+}
+
 #terminal {
   display: none;
 }
