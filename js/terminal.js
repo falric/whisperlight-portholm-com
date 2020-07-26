@@ -1,11 +1,16 @@
 (function (window, document, undefined) {
   const { Terminal } = require("xterm");
-  const term = new Terminal({ logLevel: "off", cols: 60 });
+  const term = new Terminal({
+    logLevel: "off",
+    cols: 60,
+    cursorStyle: "bar",
+  });
   term.open(document.getElementById("terminal"));
 
   console.log(term.getOption("cols"));
 
   let command = "";
+  let login = false;
 
   function runFakeTerminal() {
     if (term._initialized) {
@@ -22,10 +27,10 @@
     term.writeln("\x1b[1;36mWhisperlight Corporation Mainframe");
     term.writeln("\x1b[37m");
 
-    prompt(term);
+    prompt();
   }
 
-  function prompt(term) {
+  function prompt() {
     term.write("\r\n$ ");
   }
 
@@ -67,11 +72,31 @@
         break;
       case "Login":
       case "login":
-        term.write("\r\nLogin…");
+        term.write("\r\n");
+        showProgressBar(function () {
+          term.write("Login Successful. Welcome!");
+        });
+        login = true;
         break;
       default:
         term.write("\r\nSyntax Error");
         break;
+    }
+  }
+
+  function showProgressBar(callback) {
+    var width = 0;
+    var id = setInterval(progress, 200);
+    function progress() {
+      if (width == 20) {
+        clearInterval(id);
+        term.write("|\r\n\r\n");
+        callback();
+        prompt();
+      } else {
+        term.write("|=");
+        width++;
+      }
     }
   }
 
