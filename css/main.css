@@ -278,42 +278,113 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  height: 100%;
+  color: #dfeff9;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.2rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 h1 {
-  color: #dfeff9;
   font-family: "anuratiregular", "Franklin Gothic Medium", "Arial Narrow", Arial,
     sans-serif;
   text-transform: uppercase;
-  margin: 2rem auto;
+  visibility: hidden;
   text-align: center;
-  font-size: 2rem;
+}
+h1::after {
+  content: "W";
+  visibility: visible;
+  display: block;
+  font-size: 4rem;
+}
+
+header {
+  max-width: 70ch;
+  padding: 2ch;
+  margin: auto;
+  flex-grow: 0;
+}
+
+main {
+  max-width: 70ch;
+  padding: 2ch;
+  margin: auto;
+  flex-grow: 1;
+}
+
+section {
+  margin-bottom: 1.5rem;
+}
+
+footer {
+  max-width: 70ch;
+  padding: 2ch;
+  margin: auto;
+  flex-grow: 0;
+}
+
+#terminal {
+  display: none;
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+  html {
+    font-size: 1rem;
+  }
   h1 {
-    font-size: 2rem;
+    visibility: visible;
+    font-size: 3rem;
+  }
+  h1::after {
+    content: "";
   }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  html {
+    font-size: 1rem;
+  }
   h1 {
-    font-size: 3rem;
+    visibility: visible;
+    font-size: 4rem;
+  }
+  h1::after {
+    content: "";
   }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  html {
+    font-size: 1rem;
+  }
   h1 {
+    visibility: visible;
     font-size: 4rem;
+  }
+  h1::after {
+    content: "";
   }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+  html {
+    font-size: 1rem;
+  }
   h1 {
+    visibility: visible;
     font-size: 4rem;
+  }
+  h1::after {
+    content: "";
   }
 }
