@@ -1,7 +1,9 @@
 (function (window, document, undefined) {
   const { Terminal } = require("xterm");
-  const term = new Terminal();
+  const term = new Terminal({ logLevel: "off", cols: 60 });
   term.open(document.getElementById("terminal"));
+
+  console.log(term.getOption("cols"));
 
   let command = "";
 

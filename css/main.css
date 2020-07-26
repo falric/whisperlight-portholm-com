@@ -329,7 +329,7 @@ footer {
   flex-grow: 0;
 }
 
-.toggle-terminal {
+#toggle-terminal {
   position: absolute;
   top: 0;
   right: 0;
@@ -338,12 +338,19 @@ footer {
   cursor: pointer;
 }
 
-.toggle-terminal:focus {
+#toggle-terminal:focus {
   outline: none;
 }
 
 #terminal {
   display: none;
+}
+
+#no-terminal {
+  color: #8a6900;
+  border: 0.3rem double currentColor;
+  padding: 0.3rem;
+  text-align: center;
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -357,6 +364,12 @@ footer {
   }
   h1::after {
     content: "";
+  }
+  #terminal {
+    display: block;
+  }
+  #no-terminal {
+    display: none;
   }
 }
 
