@@ -26,3 +26,7 @@ npm start
 
 1. Searched [Duotone](https://duotone.shapefactory.co/) for an image related to `cyberpunk`, then colored it with `#0d1b44` and `#dfeff9`. The duo toned image was downloaded, and saved as `bg.png` (later exported and renamed to `bg.jpg`).
 2. Followed instructions at [Perfect Full Page Background Image](https://css-tricks.com/perfect-full-page-background-image/) to set `bg.png` as the background image.
+
+## Resources
+
+- [cipsum.com/](https://cipsum.com/)
