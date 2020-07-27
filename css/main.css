@@ -348,6 +348,7 @@ footer {
 
 #no-terminal {
   color: #8a6900;
+  background-color: #fef8cb;
   border: 0.3rem double currentColor;
   padding: 0.3rem;
   text-align: center;
