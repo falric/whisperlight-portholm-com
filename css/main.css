@@ -304,9 +304,13 @@ h1::after {
   font-size: 4rem;
 }
 
+a {
+  color: #96e3fa;
+}
+
 header {
   max-width: 70ch;
-  padding: 2ch;
+  padding: 0 2ch;
   margin: auto;
   flex-grow: 0;
 }
@@ -324,9 +328,10 @@ section {
 
 footer {
   max-width: 70ch;
-  padding: 2ch;
+  padding: 0 2ch;
   margin: auto;
   flex-grow: 0;
+  font-size: 0.8rem;
 }
 
 #toggle-terminal {
@@ -371,6 +376,9 @@ footer {
   }
   #no-terminal {
     display: none;
+  }
+  footer {
+    font-size: 0.8rem;
   }
 }
 
