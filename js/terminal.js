@@ -11,6 +11,10 @@
 
   let command = "";
   let login = false;
+  let problemsSolved = 0;
+  const requiredProblemsSolved = 2;
+  let hack1 = false;
+  let hack2 = false;
 
   function runFakeTerminal() {
     if (term._initialized) {
@@ -24,14 +28,17 @@
 
     term.onData(handleInput);
 
-    term.writeln("\x1b[1;36mWhisperlight Corporation Mainframe");
+    term.writeln("\x1b[1;36mWhisperlight Corporation Mainframe\r\n");
+    term.writeln(
+      "\x1b[1;31mHacker kit connected! Commands: [login] [hack] [track]"
+    );
     term.writeln("\x1b[37m");
 
     prompt();
   }
 
   function prompt() {
-    term.write("\r\n$ ");
+    term.write(`${login ? "" : "\r\nUnautorized"}\r\n> `);
   }
 
   function handleInput(e) {
@@ -72,11 +79,52 @@
         break;
       case "Login":
       case "login":
-        term.write("\r\n");
-        showProgressBar(function () {
-          term.write("Login Successful. Welcome!");
-        });
-        login = true;
+        if (!login) {
+          term.write("\r\n");
+          showProgressBar(function () {
+            term.write("Login Successful. Welcome!");
+          });
+          login = true;
+        }
+        break;
+      case "Hack":
+      case "hack":
+        if (login) {
+          if (problemsSolved < requiredProblemsSolved) {
+            term.write(
+              `\r\nHacked ${problemsSolved}/${requiredProblemsSolved}\r\nf(x)=2,2x-66 | y=0?\r\nf(x)=x2-22 | f(11)?`
+            );
+          } else {
+            term.write(
+              `\r\nHacked ${problemsSolved}/${requiredProblemsSolved}\r\nf(x)=2,2x-66 | y=20\r\nf(x)=x2-22 | f(11)=99`
+            );
+          }
+        }
+        break;
+      case "20":
+        if (login) {
+          if (!hack1) {
+            hack1 = true;
+            problemsSolved++;
+          }
+        }
+        break;
+      case "99":
+        if (login) {
+          if (!hack2) {
+            hack2 = true;
+            problemsSolved++;
+          }
+        }
+        break;
+      case "Track":
+      case "track":
+        if (login && hack1 && hack2) {
+          term.write("\r\nTracking…");
+          term.write(
+            "\r\nFound CEO in penthouse apartment, section A. Use elevator 2."
+          );
+        }
         break;
       default:
         term.write("\r\nSyntax Error");
