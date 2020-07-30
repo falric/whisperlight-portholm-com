@@ -96,12 +96,12 @@
             );
           } else {
             term.write(
-              `\r\nHacked ${problemsSolved}/${requiredProblemsSolved}\r\nf(x)=2,2x-66 | y=20\r\nf(x)=x2-22 | f(11)=99`
+              `\r\nHacked ${problemsSolved}/${requiredProblemsSolved}\r\nf(x)=2,2x-66 | x=30\r\nf(x)=x2-22 | f(11)=99`
             );
           }
         }
         break;
-      case "20":
+      case "30":
         if (login) {
           if (!hack1) {
             hack1 = true;
