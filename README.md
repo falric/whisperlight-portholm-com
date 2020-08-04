@@ -1,6 +1,6 @@
 # Whisperlight
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ca28016f-0c93-4168-a4d9-342663ebc3f7/deploy-status)](https://app.netlify.com/sites/whisperlight/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ca28016f-0c93-4168-a4d9-342663ebc3f7/deploy-status)](https://app.netlify.com/sites/whisperlight/deploys) [![Runme](https://runme.io/static/button.svg)](https://runme.io/run?app_id=12c5d000-ad1a-4ed3-a4f4-73f140605aee)
 
 ## Quick Creation of a Website
 
