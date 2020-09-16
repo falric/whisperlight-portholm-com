@@ -19,12 +19,12 @@ npm start
 
 ### Color Theme
 
-1. Searched [Picular](https://picular.co) for a color related to `cyberpunk`. Decided on `#44658F`.
+1. Searched [Picular](https://picular.co) for a color related to _cyberpunk_. Decided on `#44658F`.
 2. Generated a color theme with [Eva Design System](https://colors.eva.design/). Downloaded the theme as `custom-theme.json`.
 
 ### Background Image
 
-1. Searched [Duotone](https://duotone.shapefactory.co/) for an image related to `cyberpunk`, then colored it with `#0d1b44` and `#dfeff9`. The duo toned image was downloaded, and saved as `bg.png` (later exported and renamed to `bg.jpg`).
+1. Searched [Duotone](https://duotone.shapefactory.co/) for an image related to _cyberpunk_, then colored it with `#0d1b44` and `#dfeff9`. The duo toned image was downloaded, and saved as `bg.png` (later exported and renamed to `bg.jpg`).
 2. Followed instructions at [Perfect Full Page Background Image](https://css-tricks.com/perfect-full-page-background-image/) to set `bg.png` as the background image.
 
 ## Resources
