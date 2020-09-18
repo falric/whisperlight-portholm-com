@@ -20,6 +20,6 @@
     "parcel-bundler": "^1.12.4"
   },
   "dependencies": {
-    "xterm": "^4.8.1"
+    "xterm": "^4.9.0"
   }
 }
