@@ -11,6 +11,7 @@
   "license": "MIT",
   "author": "falric",
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "build": "parcel build index.html",
     "dev": "parcel index.html --open",
     "start": "npm run build && npm run dev",
@@ -21,5 +22,8 @@
   },
   "dependencies": {
     "xterm": "^4.9.0"
+  },
+  "resolutions": {
+    "node-forge": "0.10.0"
   }
 }
